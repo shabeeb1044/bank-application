@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TransationHistroy</title>
+    <link rel="stylesheet" href="./dashBord.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <div>
+        <div class="back-button back-Btn">
+            <div onclick="history.back()">
+                <img src="./image/sample-removebg-preview.png" height="40px">
+
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="report-container">
+            <div class="report-header">
+                <h1 class="recent-Articles">Recent Tranceation </h1>
+                <button class="view" onclick="obj.transactionsHistoryShow();" >Show All</button>
+            </div>
+            <!-- <div class="report-body">
+                <div class="report-topic-heading">
+                    <h3 class="t-op">User Names</h3>
+                    <h3 class="t-op">Account Number</h3>
+                    <h3 class="t-op">Amount</h3>
+                    <h3 class="t-op">Status</h3>
+                </div>
+
+                <div id="htmlDisplay">
+
+                </div>
+                <div id="htmlDisplaycredit">
+                </div>
+            </div> -->
+            <div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">User Names</th>
+                            <th scope="col">Account Number</th>
+                            <th scope="col">Amount</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Time</th>
+                          </tr>
+                    </thead>
+                    <tbody id="htmlDisplay"></tbody>
+                    <tbody id="htmlDisplaycredit"></tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+
+<script src="./js/script.js"></script></body>
+<script>
+    window.onload = function() {
+ 
+        obj.transactionsHistoryShow();
+};
+</script>
+</html>

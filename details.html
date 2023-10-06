@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="./details.css">
+</head>
+<style>
+  div .detail pre{
+    text-align: start;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  div .detail pre span {
+    font-weight: normal;
+    font-size: 18px;
+  }
+  .back-Btn{
+padding-left: 50px;
+padding-top: 20px;
+
+}
+
+
+</style>
+<body>
+  <div class="back-button back-Btn">
+    <div onclick="history.back()">
+        <img src="./image/sample-removebg-preview.png" height="40px">
+
+    </div>
+</div>
+<h2 style="text-align:center">User Profile Card</h2>
+
+<div class="card">
+  <!-- <img src="/w3images/team2.jpg" alt="" style="width:100%"> -->
+  <h1></h1>
+  
+ <div class="detail">
+  <pre > Name    : <span id="name"></span></pre>
+  <pre > Acc.No  : <span id="accNum"></span></pre>
+  <pre > Email   : <span id="place"></span></pre>
+
+ </div>
+  <div style="margin: 24px 0;">
+    <a href="#"><i class="fa fa-dribbble"></i></a> 
+    <a href="#"><i class="fa fa-twitter"></i></a>  
+    <a href="#"><i class="fa fa-facebook"></i></a> 
+  </div>
+  <p><button>Contact</button></p>
+</div>
+
+
+<script>
+  let z = localStorage.getItem("session");
+let userAc = JSON.parse(localStorage.getItem(z));
+let name = userAc.fulName;
+let accNo = userAc.accNo;
+let place = userAc.address;
+
+document.getElementById("name").innerHTML = name;
+document.getElementById("accNum").innerHTML = accNo;
+document.getElementById("place").innerHTML = place;
+</script>
+</body>
+</html>

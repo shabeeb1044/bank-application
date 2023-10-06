@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible"
+		content="IE=edge">
+	<meta name="viewport"
+		content="width=device-width,
+				initial-scale=1.0">
+	<title>Transactions-Details</title>
+	<link rel="stylesheet"
+		href="style.css">
+	<link rel="stylesheet"
+		href="responsive.css">
+        <link rel="stylesheet" href="./dashBord.css">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+
+	<!-- for header part -->
+	<header>
+
+		<div class="logosec">
+			<div class="logo" id="welcomeNote"></div>
+		</div>
+
+		<div class="searchbar">
+			<input type="text"
+				placeholder="Search">
+			<div class="searchbtn">
+			<img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20221210180758/Untitled-design-(28).png"
+					class="icn srchicn"
+					alt="search-icon">
+			</div>
+		</div>
+
+		<div class="message">
+			<div class="circle"></div>
+			<img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/8.png"
+				class="icn"
+				alt="">
+			<div class="dp">
+			<img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20221210180014/profile-removebg-preview.png"
+					class="dpicn"
+					alt="dp">
+			</div>
+		</div>
+
+	</header>
+
+	<div class="main-container">
+		<div class="navcontainer">
+			<nav class="nav">
+				<div class="nav-upper-options">
+					<div class="nav-option option1" onclick="homePage()">
+						<img src=
+"./image/imgonline-com-ua-ReplaceColor-xHJZCrUkGo-removebg-preview.png"
+							class="nav-img"
+							alt="dashboard">
+						<h3  class="font-size"> Home</h3>
+					</div>
+
+					<!-- <div class="option2 nav-option">
+						<img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/9.png"
+							class="nav-img"
+							alt="articles">
+						<h3> Articles</h3>
+					</div> -->
+
+					<div class="nav-option option3" onclick="window.location.assign('TransationHistroy.html')">
+						<img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/5.png"
+							class="nav-img"
+							alt="report">
+						<h4 class="font-size"> Trasation Details</h4>
+					</div>
+					<div class="nav-option option5"  onclick="window.location.assign('details.html')">
+						<img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183323/10.png"
+							class="nav-img" alt="blog">
+						<h3 class="font-size"> Profile</h3>
+					</div>
+
+					<div class="nav-option option6">
+						<img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/4.png"
+							class="nav-img"
+							alt="settings">
+						<h3 class="font-size"> Settings</h3>
+					</div>
+
+					
+					<div class="nav-option logout" onclick="logOutButton()">
+						<img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/7.png"
+							class="nav-img"
+							alt="logout">
+						<h3 class="font-size">Logout</h3>
+					</div>
+
+				</div>
+			</nav>
+		</div>
+		<div class="main">
+
+			<div class="searchbar2">
+				<input type="text"
+					name=""
+					id=""
+					placeholder="Search">
+				<div class="searchbtn">
+				<img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20221210180758/Untitled-design-(28).png"
+						class="icn srchicn"
+						alt="search-button">
+				</div>
+			</div>
+
+			<div class="box-container">
+
+				<div class="box box1" onclick="obj.BalanaceShow()" ondblclick="obj.showOf()">
+					<div class="text" >
+						<h2 class="topic-heading"  id="Balanace"></h2>
+						<h2 class="topic">Balanace Amount</h2>
+					</div>
+
+					<img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20221210184645/Untitled-design-(31).png"
+						alt="Views">
+				</div>
+
+				<div class="box box2" onclick="obj.creditCount()" ondblclick="obj.creditCountShowOff()">
+					<div class="text">
+						<h2 class="topic-heading" id="creditCountShow"></h2>
+						<h2 class="topic">Total credit Tranceation </h2>
+					</div>
+
+					<img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210184645/Untitled-design-(31).png"
+						alt="Views">
+				</div>
+
+						<div class="box box3" onclick="obj.debitCount()">
+
+
+							<div class="text">
+								<h2 class="topic-heading" id="debitCountShow"></h2>
+		
+								<h2 class="topic">Total debit Tranceation </h2>
+		
+							</div>
+							<img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210184645/Untitled-design-(31).png"
+								alt="Views">
+						</div>
+
+				<!-- <div class="box box4">
+					<div class="text">
+						<h2 class="topic-heading">70</h2>
+						<h2 class="topic">Number of tranceation</h2>
+					</div>
+
+					<img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20221210185029/13.png" alt="published">
+				</div> -->
+			</div>
+
+			<div class="report-container">
+				<div class="report-header">
+					<h1 class="recent-Articles"> Transfer Money </h1>
+					<!-- <button class="view">View All</button> -->
+				</div>
+
+				<div class="report-body">
+					
+
+					<div class="items">
+						<form>
+							<div class="mb-3">
+							  <label for="toAcc" class="form-label">Account Number</label>
+							  <input type="number" class="form-control" id="toAcc"  >
+							  <div class="form-text"></div>
+							</div>
+							<div class="mb-3">
+							  <label for="amount" class="form-label">Amount</label>
+							  <input type="number" class="form-control" id="amount" onfocus="obj.checkAmount()">
+							</div>
+							<!-- <div class="mb-3 form-check">
+							  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+							  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+							</div> -->
+							<button type="submit" class="btn btn-primary" onclick="obj.transactions();">Submit</button>
+						  </form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./js/script.js"></script>
+	
+</body>
+</html>
